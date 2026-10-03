@@ -1,0 +1,37 @@
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #fff;
+  background: #090909;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color-scheme: dark;
+  --ink: #fff;
+  --muted: #b8b4ae;
+  --accent: #ec8e12;
+  --accent-dark: #ec8e12;
+  --accent-soft: rgb(236 142 18 / 15%);
+  --line: #393632;
+  --surface: #171717;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: #090909;
+}
+
+button,
+a { -webkit-tap-highlight-color: transparent; }
+
+button { font: inherit; }
+
+::selection {
+  background: #ec8e12;
+  color: #111;
+}

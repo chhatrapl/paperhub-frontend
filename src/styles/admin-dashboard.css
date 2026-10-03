@@ -1,0 +1,101 @@
+.admin-dashboard-page {
+  min-height: 100svh;
+  padding: max(28px, env(safe-area-inset-top)) 20px 116px;
+  background: #090909;
+}
+
+.admin-dashboard-content {
+  width: min(100%, 660px);
+  margin: 0 auto;
+}
+
+.admin-dashboard-content .brand-header {
+  margin: 52px 0 74px;
+}
+
+.admin-actions-panel {
+  display: grid;
+  gap: 42px;
+  padding: 64px 48px;
+  border: 1px solid var(--line);
+  border-radius: 36px;
+  background: var(--surface);
+  box-shadow: 0 14px 32px rgb(0 0 0 / 38%);
+}
+
+.admin-action-button {
+  display: grid;
+  min-height: 118px;
+  place-items: center;
+  padding: 18px 20px;
+  border-radius: 23px;
+  background: var(--accent);
+  box-shadow: 0 8px 18px rgb(236 142 18 / 22%);
+  color: #111;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+  text-decoration: none;
+  transition: filter 150ms ease, transform 150ms ease;
+}
+
+.admin-action-button:hover {
+  transform: translateY(-2px);
+  filter: saturate(1.12) brightness(1.02);
+}
+
+.admin-action-button:active { transform: translateY(1px); }
+
+.admin-action-button:focus-visible {
+  outline: 3px solid var(--accent-dark);
+  outline-offset: 4px;
+}
+
+.admin-action-page {
+  display: grid;
+  min-height: 62vh;
+  place-content: center;
+  gap: 15px;
+  text-align: center;
+}
+
+.admin-action-page h1 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 28px;
+}
+
+.admin-action-page p {
+  max-width: 420px;
+  color: var(--muted);
+}
+
+.admin-action-back {
+  justify-self: center;
+  margin-top: 7px;
+  color: var(--accent-dark);
+  font-weight: 600;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+  .admin-dashboard-page { padding: max(24px, env(safe-area-inset-top)) 20px 108px; }
+  .admin-dashboard-content .brand-header { margin: 44px 0 74px; }
+
+  .admin-actions-panel {
+    gap: 29px;
+    padding: 48px 26px;
+    border-radius: 31px;
+  }
+
+  .admin-action-button {
+    min-height: 80px;
+    padding: 15px 10px;
+    border-radius: 18px;
+    font-size: 25px;
+  }
+
+  .admin-action-page { min-height: 55vh; }
+}

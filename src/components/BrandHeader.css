@@ -1,0 +1,60 @@
+.brand-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 42px 0 68px;
+}
+
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.brand-logo {
+  display: block;
+  width: 270px;
+  max-width: min(70vw, 100%);
+  height: auto;
+}
+
+.admin-login-link {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: grid;
+  width: 46px;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+  box-shadow: 0 2px 8px rgb(18 48 48 / 6%);
+  color: var(--accent-dark);
+  transform: translateY(-50%);
+  transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.admin-login-link svg { width: 21px; height: 21px; }
+
+.admin-login-link:hover {
+  transform: translateY(-50%) scale(1.05);
+  border-color: #efbd73;
+  background: var(--accent-soft);
+}
+
+.admin-login-link:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .brand-header { margin: 37px 0 45px; }
+  .brand-logo { width: 235px; }
+  .brand-header.has-admin-login .brand-logo { width: 195px; }
+  .admin-login-link { width: 40px; right: 0; }
+  .admin-login-link svg { width: 19px; height: 19px; }
+}
